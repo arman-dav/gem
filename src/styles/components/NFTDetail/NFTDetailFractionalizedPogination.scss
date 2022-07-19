@@ -1,0 +1,31 @@
+.fractionalizedPagination {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .css-1y7coo4-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    background: #181721;
+  }
+  .css-1y7coo4-MuiButtonBase-root-MuiPaginationItem-root {
+    background: #181721;
+    opacity: 0.7;
+    color: #fff;
+    box-shadow: 0px 0.4rem 2rem rgb(0 0 0 / 50%);
+    font-size: 1.8rem;
+    width: 5rem;
+    height: 5rem;
+    //border-radius: 50%;
+  }
+  .css-1v2lvtn-MuiPaginationItem-root {
+    color: #fff;
+  }
+  .css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+  .css-1y7coo4-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    color: #b1dff7;
+    border: 1px solid #b1dff7;
+  }
+}

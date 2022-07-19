@@ -1,0 +1,43 @@
+@use "sass:math";
+@import "../../utils/mixin.scss";
+
+$boxes: 30;
+$durationAll: 0.8s;
+$duration: math.div(-$durationAll, $boxes);
+$color: #e3ae23;
+.loader {
+  height: 100vh;
+  @include center;
+  //   position: relative;
+}
+
+.loader__container {
+  width: 600px;
+  height: 2px;
+  margin: auto;
+}
+.loader__container__wrapper {
+  height: 100%;
+  display: flex;
+  transform: translateZ(0);
+
+  div {
+    flex: 1;
+    background: #{$color};
+    animation: go #{$durationAll} infinite alternate ease;
+    box-shadow: 0 0 20px #{$color};
+
+    @for $i from 1 through $boxes {
+      &:nth-child(#{$i}) {
+        animation-delay: $duration * ($boxes - $i);
+      }
+    }
+  }
+}
+@keyframes go {
+  100% {
+    background: transparent;
+    flex: 30;
+    box-shadow: 0 0 0 transparent;
+  }
+}

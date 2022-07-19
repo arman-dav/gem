@@ -1,0 +1,150 @@
+.detailsSlider {
+  @include center;
+  flex-direction: column;
+  &__container {
+    padding-top: 3.5rem;
+    border-top: 1px solid #60666b;
+    width: 100%;
+    .slick-dots {
+      li:first-child,
+      li:last-child {
+        button::before {
+          padding: 0.2rem;
+          margin-top: 0.2rem;
+        }
+      }
+      li:nth-child(2),
+      li:nth-last-child(2) {
+        button::before {
+          padding: 0.3rem;
+          margin-top: 0.1rem;
+        }
+      }
+
+      li {
+        width: 0.6rem;
+        button {
+          padding: 0;
+          @include center;
+        }
+        button::before {
+          color: transparent;
+
+          width: 0;
+          height: 0;
+          padding: 0.4rem;
+          border: 1px solid #60666b;
+          box-sizing: border-box;
+          border-radius: 50%;
+        }
+      }
+
+      .slick-active {
+        button::before {
+          color: transparent;
+
+          width: 0;
+          height: 0;
+          padding: 0.4rem;
+          background: #e3ae23;
+          border: 1px solid #e3ae23;
+          box-sizing: border-box;
+          border-radius: 50%;
+        }
+      }
+    }
+    .slick {
+      &-arrow {
+        width: 5rem;
+        height: auto;
+        &::before {
+          display: none;
+        }
+      }
+      &-prev {
+        left: -5.2rem;
+      }
+      &-next {
+        right: -5.2rem;
+      }
+      &-dots {
+        bottom: -4.5rem;
+        li {
+          button::before {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__card__container {
+    @include center;
+  }
+  &__card {
+    &__imgDiv {
+      @include center;
+      flex-direction: column;
+      > svg {
+        max-width: 180.33px;
+        max-height: 185.57px;
+      }
+      &--iconDiv {
+        svg {
+          width: 1.348rem;
+          height: 1.294rem;
+        }
+      }
+      &--textDiv {
+        p {
+          margin: 0.8rem 0;
+          font-size: 1.6rem;
+          line-height: 2.6rem;
+          text-align: center;
+          color: #6e757c;
+          text-align: center;
+        }
+      }
+    }
+    &__authorDiv {
+      width: 184.3px;
+      height: 48.8px;
+      display: flex;
+      justify-content: center;
+      background-color: #181721;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+      border-radius: 2rem;
+
+      &--author {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 1.7rem;
+        &--collectionName {
+          margin: 0;
+          min-width: 11.9rem;
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+
+          color: #ffffff;
+          padding-bottom: 0.263rem;
+          border-bottom: 1px solid #60666b;
+          max-width: 14.942rem;
+        }
+        &--name {
+          margin: 0;
+
+          font-style: normal;
+          font-weight: normal;
+
+          font-size: 0.9rem;
+          line-height: 1.1rem;
+
+          color: #ffffff;
+          padding-top: 0.337rem;
+        }
+      }
+    }
+  }
+}

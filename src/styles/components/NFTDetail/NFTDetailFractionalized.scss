@@ -1,0 +1,121 @@
+.Fractionalized {
+  width: 100%;
+
+  &--titles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #181721;
+    box-shadow: 0px 0.4rem 2rem rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    padding: 2rem 0.2rem;
+    margin-bottom: 2rem;
+    &--container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 3rem;
+      grid-column-gap: 0.5rem;
+      &--title {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 1.8rem;
+        color: #ffffff;
+      }
+    }
+    &--container:last-child,
+    &--container:nth-child(4) {
+      margin-left: 0;
+    }
+  }
+  &--content {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 1.2rem;
+    svg {
+      background: none !important;
+    }
+    &--container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: #181721;
+      box-shadow: 0px 0.4rem 2rem rgba(0, 0, 0, 0.5);
+      border-radius: 2rem;
+      padding: 0 0.2rem;
+      &--ethPrice p {
+        width: 7rem;
+        display: flex;
+        justify-content: flex-start;
+      }
+      &--usdPrice,
+      &--ethPrice,
+      &--fraction,
+      &--fraction,
+      &--owner,
+      &--buy {
+        font-family: "Montserrat";
+        font-weight: 500;
+        font-size: 1.8rem;
+        color: #eceff4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column-gap: 0.9rem;
+      }
+      &--usdPrice {
+        font-size: 1.2rem;
+        p {
+          font-size: 1.8rem;
+        }
+      }
+      button {
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: #ffcf53;
+        border: none;
+        background: none;
+      }
+      button:focus {
+        outline: none;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .Fractionalized--content--container--buy {
+    position: sticky !important;
+    width: 10.2rem !important;
+    right: -1%;
+    border-radius: 0px 20px 20px 0px;
+  }
+  .Fractionalized {
+    width: 89rem;
+  }
+  .Fractionalized_scroll__container {
+    width: 100%;
+    overflow-x: scroll;
+    margin-left: 2%;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 1020px) {
+  .Fractionalized_scroll__container {
+    position: relative;
+    width: 96%;
+  }
+  .Fractionalized--content--container--buy {
+    position: absolute;
+    right: -1%;
+    background: #181721;
+    box-shadow: -5px 0px 10px rgb(73 73 73 / 20%);
+    /* border-radius: 0px 20px 20px 0px; */
+    width: 104px;
+    height: 58px;
+    button {
+      font-size: 1.5rem;
+    }
+  }
+  .Fractionalized--content--container--buy:nth-child(1) {
+    top: 22%;
+  }
+}

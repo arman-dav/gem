@@ -1,0 +1,45 @@
+.aboutCategoryAction {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  > span {
+    display: flex;
+    align-items: center;
+
+    font-family: "Roboto";
+    font-size: 2rem;
+    line-height: 2.3rem;
+    text-align: center;
+    text-shadow: 3px -3px 6px rgba(0, 0, 0, 0.15);
+    color: #e5e5e5;
+
+    height: 11.149rem;
+    padding: 0 3.6rem;
+  }
+  > p {
+    min-height: 5rem;
+    @include robotoFontSmall;
+    color: #808080;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 1.7rem;
+    max-width: 17rem;
+  }
+  > button {
+    width: 16.089rem;
+    height: 4.446rem;
+
+    background: #e3ae23;
+    border: 1px solid #e3ae23;
+    box-sizing: border-box;
+    border-radius: 4rem;
+
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    color: black;
+    border: none;
+
+    margin-top: 1.646rem;
+  }
+}

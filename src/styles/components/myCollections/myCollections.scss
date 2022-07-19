@@ -1,0 +1,119 @@
+.myCollections {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    max-width: 114rem;
+    width: 79.16666666666667%;
+    padding-top: 7rem;
+    padding-bottom: 10rem;
+
+    > span {
+      font-size: 3.6rem;
+      line-height: 4.4rem;
+      display: block;
+      color: #111111;
+    }
+    > p {
+      @include robotoFontSmall;
+      color: #808080;
+      margin: 0;
+      padding-top: 2.4rem;
+      padding-bottom: 3.2rem;
+    }
+    > button {
+      max-width: 18.3rem;
+      @include buttonStyle;
+      padding: 1.6rem 2.4rem 1.7rem 2.4rem;
+      margin-bottom: 6rem;
+    }
+    > div {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    &__card__container {
+      width: 48.68421052631579%;
+      min-width: 27rem;
+    }
+    &__card {
+      display: flex;
+      flex-direction: column;
+      &__imgDiv {
+        background-color: #b9bec7;
+        height: 25.287rem;
+        @include center;
+        flex-direction: column;
+        &--textDiv {
+          padding-top: 3.18rem;
+          p {
+            margin-top: 0;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            text-align: center;
+            color: #6e757c;
+          }
+        }
+      }
+      &__authorDiv {
+        display: flex;
+        background-color: #fff;
+        border-radius: 0.4rem;
+        border: 0.1rem solid #b9bec7;
+        box-sizing: border-box;
+        border-radius: 0 0 0.4rem 0.4rem;
+        &--iconDiv {
+          width: 20%;
+          height: 7.2rem;
+          @include center;
+          svg {
+            background-color: #b9bec7;
+            padding: 1.3rem;
+            border-radius: 5rem;
+          }
+        }
+        &--author {
+          width: 30%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          &--collectionName {
+            margin: 0;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            padding-bottom: 1rem;
+            min-width: 11.9rem;
+          }
+          &--name {
+            padding-bottom: 1rem;
+            margin: 0;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1.2rem;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 683px) {
+  .myCollections {
+    &__container {
+      > div {
+        justify-content: center;
+        row-gap: 1.5rem;
+      }
+      &__card__container {
+        width: 80%;
+      }
+    }
+  }
+}

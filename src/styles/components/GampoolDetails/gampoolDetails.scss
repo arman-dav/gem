@@ -1,0 +1,28 @@
+.gempoolDetails {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 144rem;
+  margin: 0 auto;
+  padding-bottom: 17.7rem;
+  background-color: #0f0e13;
+  &__content {
+    width: 79.3%;
+    margin-top: 16rem;
+    &__upperPart {
+      display: flex;
+      grid-gap: 14.3rem;
+      &__leftSection {
+        width: 57.2%;
+        display: flex;
+        flex-direction: column;
+        &--imgDiv {
+          @include center;
+          flex-direction: column;
+          padding-bottom: 4.5rem;
+        }
+      }
+    }
+  }
+}

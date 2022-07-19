@@ -1,0 +1,171 @@
+.faq {
+  width: 100%;
+  background-color: #181721;
+  border-bottom: 1px solid rgba(110, 117, 124, 0.3);
+
+  &__upperPart {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 114rem;
+    padding: 4.9rem 18.46rem 7rem 18.46rem;
+    &__textSection {
+      padding-right: 11.528%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      span {
+        display: block;
+        font-size: 4.2rem;
+        line-height: 5.1rem;
+        color: #e5e5e5;
+      }
+      p {
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+        color: #686a74;
+        margin: 0;
+        padding-top: 2.4rem;
+        text-align: left;
+        min-width: 28rem;
+        max-width: 55.5rem;
+      }
+    }
+    > img {
+      min-width: 26.4rem;
+      max-width: 100%;
+    }
+  }
+  &__faqSection {
+    padding: 10.5rem 0;
+    @include center;
+    background-color: #0f0e13;
+    display: flex;
+    flex-direction: column;
+    &__container {
+      width: 70.487%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      max-width: 101.5rem;
+      &__data {
+        > p {
+          font-family: "Roboto";
+          font-size: 2.5rem;
+          line-height: 2.9rem;
+          color: #e5e5e5;
+          margin: 0;
+          margin-left: 2.8rem;
+          padding-bottom: 4.7rem;
+        }
+        display: flex;
+        flex-direction: column;
+        &--questionDiv {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          flex-direction: column;
+          max-height: 30rem;
+          transition: max-height 0.7s ease-in;
+          overflow: hidden;
+          &--hide {
+            max-height: 7.5rem;
+            overflow: hidden;
+            transition: max-height 0.7s ease-out;
+          }
+          &--question {
+            cursor: pointer;
+
+            width: 100%;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            color: #c0c2c7;
+            display: flex;
+            align-items: center;
+            grid-gap: 1.5rem;
+            justify-content: space-between;
+            > span {
+              display: flex;
+              align-items: center;
+              svg {
+                min-width: 1.9rem;
+              }
+            }
+          }
+
+          &--iconDiv {
+            width: 0.8rem;
+            height: 0.8rem;
+            @include center;
+            border: 1px solid rgba(255, 210, 94, 0.9375);
+            border-radius: 5rem;
+          }
+          &--answerDiv {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            max-height: 19.6rem;
+            &--hide {
+              overflow: hidden;
+              margin-left: 3.5rem;
+              justify-content: flex-end;
+              max-height: 18.5rem;
+            }
+            &--answer {
+              font-size: 1.8rem;
+              line-height: 3.2rem;
+              font-weight: 500;
+              color: #64666d;
+              max-width: 89.9rem;
+              overflow-y: scroll;
+              padding-right: 8.1rem;
+
+              scrollbar-color: rgba(255, 210, 94, 0.7) #0f0e13;
+              scrollbar-width: thin;
+              &::-webkit-scrollbar {
+                width: 0.2rem;
+              }
+              &::-webkit-scrollbar-thumb {
+                background: rgba(255, 210, 94, 0.7);
+                border-radius: 9.9rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .faq {
+    &__faqSection {
+      &__container {
+        display: block;
+      }
+    }
+    img {
+      max-width: 50%;
+      min-width: auto;
+    }
+    &__upperPart {
+      padding: 5rem 0;
+      @include center;
+      flex-direction: column;
+      text-align: center;
+      &__textSection {
+        padding: 0;
+        padding-bottom: 5rem;
+        p {
+          text-align: center;
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

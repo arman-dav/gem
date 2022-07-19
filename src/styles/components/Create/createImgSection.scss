@@ -1,0 +1,142 @@
+.create__container__imgSection {
+  &_span {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #eceff4;
+  }
+  &_p {
+    @include robotoFontSmall;
+    color: #7a797c;
+    margin-bottom: 3.453rem;
+    margin-top: 0.5rem;
+  }
+  &--img {
+    display: flex;
+    justify-content: center;
+  }
+  &__imgContainer {
+    width: 85.4rem;
+    height: 25.4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1rem;
+
+    background: #16151a;
+    border: 0.5px solid #60666b;
+    box-sizing: border-box;
+    border-radius: 1rem;
+
+    position: relative;
+
+    > svg {
+      position: absolute;
+      right: 1.87rem;
+      top: 1.44rem;
+    }
+
+    &--imgDiv {
+      width: 4.689rem;
+      height: 4.584rem;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    p {
+      @include robotoFontSmall;
+      color: #637a88;
+      margin: 0;
+      span {
+        font-family: "Roboto";
+        text-decoration: underline;
+        padding-left: 0.3rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.create__container__imgSection__afterDragging--imgDiv {
+  width: 85.4rem;
+  height: 25.4rem;
+
+  background: #16151a;
+  border: 0.5px solid #60666b;
+  box-sizing: border-box;
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1rem;
+
+  object-fit: cover;
+  background-size: cover;
+
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  svg {
+    position: absolute;
+    right: 1.87rem;
+    top: 1.44rem;
+    color: black;
+  }
+}
+
+@media (max-width: 1024px) {
+  .create__container__imgSection {
+    &__imgContainer {
+      width: 70rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .create__container__imgSection {
+    &_span {
+      margin-left: 17%;
+    }
+    &_p {
+      margin-left: 17%;
+    }
+    &__imgContainer {
+      width: 40rem;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .create__container__imgSection {
+    &_span {
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      margin-left: 28%;
+    }
+    &_p {
+      margin-left: 28%;
+      font-size: 1.2rem;
+      line-height: 2.2rem;
+    }
+    &__imgContainer {
+      width: 26.5rem;
+      height: 14.3rem;
+      p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        text-align: center;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}

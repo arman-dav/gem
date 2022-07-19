@@ -1,0 +1,21 @@
+.allItems {
+  width: 97%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 5.3rem;
+  padding-bottom: 2.5rem;
+  cursor: pointer;
+  &__title {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #60666b;
+    margin-left: 0.5rem;
+  }
+  &__check {
+    border: 0.2rem solid #b1dff7;
+    border-radius: 2px;
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}

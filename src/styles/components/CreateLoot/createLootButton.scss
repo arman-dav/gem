@@ -1,0 +1,220 @@
+.createLootButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5rem;
+  position: relative;
+  &__button {
+    width: 15.5rem;
+    height: 3.523rem;
+    @include robotoFontBig;
+    border: none;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1000;
+    background-color: #e3ae23;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    &--animated {
+      border: none;
+      box-sizing: border-box;
+      width: 100%;
+      position: relative;
+      z-index: 1000;
+      background-color: #e3ae23;
+      border-radius: 1rem;
+
+      width: 15.5rem;
+      height: 3.523rem;
+      @include robotoFontBig;
+      cursor: pointer;
+
+      animation: LeftToRightCreateLoot 0.7s linear 1;
+      transform: translateX(700px);
+      &--tablet {
+        border: none;
+        box-sizing: border-box;
+        width: 100%;
+        position: relative;
+        z-index: 1000;
+        background-color: #e3ae23;
+        border-radius: 1rem;
+
+        width: 15.5rem;
+        height: 3.523rem;
+
+        @include robotoFontBig;
+        cursor: pointer;
+
+        animation: LeftToRightCreateLootTablet 0.35s linear 1;
+        transform: translateX(230px);
+      }
+      &--mobile {
+        border: none;
+        box-sizing: border-box;
+        width: 100%;
+        position: relative;
+        z-index: 1000;
+        background-color: #e3ae23;
+        border-radius: 1rem;
+
+        width: 15.5rem;
+        height: 3.523rem;
+        @include robotoFontBig;
+        cursor: pointer;
+
+        animation: LeftToRightCreateLootMobile 0.35s linear 1;
+        transform: translateX(171px);
+      }
+    }
+  }
+}
+
+.arrow-parent {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+}
+
+.arrow-parent > li {
+  height: 0.9297rem;
+  width: 0.9297rem;
+
+  border-top-color: transparent;
+  border-right-color: transparent;
+
+  transform: rotate(-135deg);
+  transition: all 0.2s ease;
+
+  opacity: 0;
+}
+
+.arrow-ele:nth-child(n) {
+  animation: OpacityAnimation 1.5s cubic-bezier(0.42, 0, 0.9, 1) infinite;
+}
+.arrow-ele:nth-child(n + 1) {
+  animation: OpacityAnimation2 1.5s cubic-bezier(0.42, 0, 0.9, 1) infinite;
+}
+.arrow-ele:nth-child(3n + 1) {
+  animation: OpacityAnimation3 1.5s cubic-bezier(0.42, 0, 0.9, 1) infinite;
+}
+
+@keyframes OpacityAnimation {
+  0% {
+    opacity: 0.3;
+    border: 1px solid #ffd25e;
+    border-top-color: transparent;
+    border-right-color: transparent;
+  }
+  25% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.3;
+    border: 1px solid #ffd25e;
+    border-top-color: transparent;
+    border-right-color: transparent;
+  }
+}
+@keyframes OpacityAnimation2 {
+  0% {
+    opacity: 0.9;
+    border: 1px solid #ffd25e;
+    border-top-color: transparent;
+    border-right-color: transparent;
+  }
+  25% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.9;
+    border: 1px solid #ffd25e;
+    border-top-color: transparent;
+    border-right-color: transparent;
+  }
+}
+@keyframes OpacityAnimation3 {
+  0% {
+    opacity: 0.2;
+    border: 1px solid #ffd25e;
+    border-top-color: transparent;
+    border-right-color: transparent;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.74;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.2;
+    border: 1px solid #ffd25e;
+    border-top-color: transparent;
+    border-right-color: transparent;
+  }
+}
+
+@keyframes LeftToRightCreateLoot {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(700px);
+  }
+}
+@keyframes LeftToRightCreateLootTablet {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(170px);
+  }
+}
+@keyframes LeftToRightCreateLootMobile {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(165px);
+  }
+}
+
+@media (max-width: 880px) {
+  .createLootButton {
+    max-width: 39rem;
+  }
+}
+@media (max-width: 610px) {
+  .createLootButton {
+    max-width: 24rem;
+    margin-bottom: 5.5rem;
+    &__button {
+      width: 9.2rem;
+      &--animated {
+        &--mobile {
+          width: 9.2rem;
+        }
+      }
+    }
+  }
+}

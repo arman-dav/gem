@@ -1,0 +1,111 @@
+.layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+  background-color: #0f0e13;
+  min-height: 100vh;
+  &__buffer {
+    height: 8.5rem;
+    &--blur {
+      height: 7.4rem;
+    }
+  }
+  &__connectWallet,
+  &__createPopup {
+    &--hide {
+      display: none;
+    }
+    width: 100%;
+
+    display: flex;
+    z-index: 10;
+    height: 100vh;
+
+    > div {
+      z-index: 98999;
+    }
+  }
+  &__connectWallet {
+    max-width: 128rem;
+    justify-content: flex-end;
+    position: fixed;
+  }
+  &__createPopup {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  &__menuPopup {
+    &--hide {
+      display: none;
+    }
+    width: 100%;
+    max-width: 144rem;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 999;
+    > div {
+      margin-top: 8.681%;
+      position: absolute;
+      right: 6%;
+    }
+  }
+
+  &__children {
+    flex: 1;
+    width: 100%;
+    background-color: #0f0e13;
+
+    &--blur {
+      background-color: #0f0e13;
+
+      filter: blur(16px);
+      width: 103%;
+      margin-top: -3.2rem;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .layout {
+    &__menuPopup {
+      > div {
+        margin-top: 8%;
+        right: 4%;
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .layout {
+    &__menuPopup {
+      > div {
+        margin-top: 10%;
+        right: 1%;
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .layout {
+    &__menuPopup {
+      > div {
+        margin-top: 12%;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .layout {
+    &__menuPopup {
+      > div {
+        margin-top: 5%;
+        right: 0%;
+      }
+    }
+  }
+}

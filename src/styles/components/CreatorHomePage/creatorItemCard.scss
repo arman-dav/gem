@@ -1,0 +1,177 @@
+.creatorSliderCard {
+  width: 24.3rem;
+  height: 31.8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 0.898rem;
+
+  position: relative;
+  cursor: pointer;
+
+  &__headingSection {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.239rem;
+    position: absolute;
+    max-width: 20rem;
+    padding-top: 1.3rem;
+
+    &--buy {
+      background: #181721;
+      box-shadow: 0px 0.4rem 2rem rgba(0, 0, 0, 0.5);
+      border-radius: 0.8rem;
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #ffcf53;
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      opacity: 0;
+      transition: 0.3s;
+      cursor: pointer;
+      border: 1px solid #181721;
+      padding: 0.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--likes {
+      display: flex;
+      align-items: center;
+      p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        color: #808080;
+        margin: 0;
+        padding-left: 0.772rem;
+      }
+    }
+  }
+
+  &__imageSection {
+    @include center;
+    flex-direction: column;
+    background-color: #16151a;
+    position: relative;
+    box-shadow: 0px 0.4rem 2rem rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    width: 23.777rem;
+    height: 24.467rem;
+
+    &--imgDiv {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2rem;
+      img {
+        max-width: 100%;
+        width: 80%;
+        margin: auto;
+        border-radius: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      color: #6e757c;
+      margin: 0;
+      padding-top: 1.65rem;
+    }
+  }
+  &__infoSection {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+
+    border-radius: 2rem;
+    background: #181721;
+    &--container {
+      margin: 0 auto;
+      height: 6.435rem;
+      max-width: 19.721rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0.5rem;
+      &--fotter {
+        margin-top: 0.03rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        p {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 11px;
+          line-height: 13px;
+          text-align: right;
+          color: #fff;
+        }
+        &--gem_type_and_carat {
+          display: flex;
+          grid-column-gap: 0.8rem;
+          div {
+            background: rgba(177, 223, 247, 0.15);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4.9rem;
+            height: 1.7rem;
+            color: #b1dff7;
+          }
+        }
+      }
+      &--nameDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid #60666b;
+        margin-bottom: 0.4rem;
+        padding-bottom: 0.4rem;
+        h4,
+        p {
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: lighter;
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+          color: #ffffff;
+          margin: 0;
+        }
+        p {
+          color: #ffcf53;
+        }
+      }
+
+      > p {
+        margin: 0;
+        padding-top: 0.4rem;
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+
+        color: #ffffff;
+
+        font-style: normal;
+        font-weight: 100;
+      }
+    }
+  }
+}
+.creatorSliderCard:hover .creatorSliderCard__headingSection--buy {
+  opacity: 1;
+}

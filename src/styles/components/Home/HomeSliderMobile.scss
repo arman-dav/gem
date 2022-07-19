@@ -1,0 +1,24 @@
+.HomeSliderMobile__container {
+  width: 90%;
+  height: auto;
+  margin: 4rem auto;
+  display: none;
+  &--content {
+    width: 84px !important;
+    height: 85px;
+    filter: drop-shadow(0px 0px 35px #000000);
+    border-radius: 15px;
+    display: block !important;
+    margin: 0 auto;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 15px;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .HomeSliderMobile__container {
+    display: block;
+  }
+}

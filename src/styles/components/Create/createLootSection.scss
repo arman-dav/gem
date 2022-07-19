@@ -1,0 +1,196 @@
+.createLootSection {
+  max-width: 62rem;
+  margin-top: 6.646rem;
+
+  display: flex;
+  grid-gap: 1.3rem;
+  width: 100%;
+  &__loots {
+    max-width: 55.9rem;
+    width: 100%;
+    position: relative;
+
+    &__upperPart {
+      border: 1px solid #6e757c;
+      box-sizing: border-box;
+      border-radius: 1rem;
+
+      height: 4.8rem;
+
+      padding: 0 2.2rem 0 2.884rem;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      overflow: hidden;
+      position: relative;
+      > span {
+        position: absolute;
+        background-color: #0f0e13;
+        right: 0rem;
+        width: 36px;
+        height: 37px;
+        span {
+          position: absolute;
+          right: 3.6rem;
+          width: 5rem;
+          height: 3.7rem;
+
+          background: linear-gradient(
+            270deg,
+            #0f0e13 0%,
+            rgba(15, 14, 19, 0) 67.35%
+          );
+        }
+      }
+      > svg {
+        position: absolute;
+        right: 2.5rem;
+        z-index: 9999;
+      }
+      > div {
+        display: flex;
+        gap: 0.9rem;
+        div {
+          display: flex;
+          align-items: center;
+          grid-gap: 1rem;
+
+          width: 15.897rem;
+          height: 3.2rem;
+
+          background: rgba(96, 102, 107, 0.1);
+          border: 1px solid #60666b;
+          box-sizing: border-box;
+          border-radius: 13.7rem;
+
+          padding-left: 1.4rem;
+
+          position: relative;
+          img {
+            width: 1.9rem;
+            height: 1.9rem;
+
+            border: 0.5px solid #c4c4c4;
+            box-sizing: border-box;
+            border-radius: 50%;
+          }
+          svg {
+            position: absolute;
+            right: 1.4rem;
+          }
+        }
+      }
+      p {
+        color: #6f6d70;
+        margin: 0;
+      }
+      &--iconUp {
+        transform: rotate(180deg);
+      }
+    }
+    &__secondPart {
+      width: 559px;
+      height: 215px;
+
+      padding: 0rem 0 5.1rem 0;
+      background: #181721;
+      border: 1px solid #6e757c;
+      box-sizing: border-box;
+      border-radius: 10px;
+
+      position: absolute;
+      z-index: 9999;
+      top: 5.8rem;
+
+      display: flex;
+      flex-direction: column;
+
+      padding-top: 3rem;
+      div {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        img {
+          position: absolute;
+          width: 2.5rem;
+          height: 2.5rem;
+          left: 2.4rem;
+        }
+        p {
+          margin: 0;
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+          color: #c4c4c4;
+          padding-left: calc(3.8rem + 2.4rem);
+          width: 100%;
+
+          padding-top: calc(0.5rem + 0.75rem);
+          padding-bottom: calc(0.5rem + 0.75rem);
+        }
+        &:first-child {
+          p {
+            padding-top: 0;
+          }
+          img {
+            top: -0.56rem;
+          }
+        }
+      }
+    }
+  }
+  &--addLoot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #6e757c;
+    box-sizing: border-box;
+    border-radius: 1rem;
+
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    padding: 1.335rem 0;
+    cursor: pointer;
+
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .createLootSection {
+    justify-content: center;
+    &__loots {
+      max-width: 34.5rem;
+      height: 4.2rem;
+      &__upperPart {
+        height: 4.2rem;
+      }
+      &__secondPart {
+        width: 40rem;
+      }
+    }
+    &--addLoot {
+      width: 4.2rem;
+      height: 4.2rem;
+      svg {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .createLootSection {
+    &__loots {
+      max-width: 21.2rem;
+      &__secondPart {
+        width: 26.5rem;
+      }
+    }
+  }
+}

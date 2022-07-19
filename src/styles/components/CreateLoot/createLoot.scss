@@ -1,0 +1,309 @@
+.createLoot__modal {
+  width: 100%;
+  height: 100vh;
+  z-index: 200;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.createLoot {
+  position: absolute;
+  top: 7.5rem;
+
+  width: 100%;
+  max-width: 108.6rem;
+  height: 68.6rem;
+
+  background: #16151a;
+  border: 0.5px solid #e3ae23;
+  box-sizing: border-box;
+  border-radius: 2rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 5.5rem 11.6rem 5.677rem 11.6rem;
+
+    .createButton {
+      max-width: unset;
+      width: 100%;
+    }
+    &--title {
+      p {
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+
+        color: #eceff4;
+      }
+    }
+    &__wrapper {
+      display: flex;
+      max-width: 85.4rem;
+      width: 100%;
+      justify-content: space-between;
+      &__imgSection {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        > span {
+          font-size: 1.6rem;
+          line-height: 2rem;
+          color: #eceff4;
+        }
+        > p {
+          @include robotoFontSmall;
+          color: #7d7d7f;
+          margin: 0;
+        }
+        > div {
+          @include center;
+          width: 28rem;
+          height: 28rem;
+          background: #16151a;
+          margin-top: 3.653rem;
+          border: 0.5px solid #60666b;
+          box-sizing: border-box;
+          border-radius: 10px;
+
+          > svg {
+            &:first-child {
+              position: absolute;
+              top: 1.94rem;
+              right: 2.57rem;
+            }
+          }
+          p {
+            position: absolute;
+            bottom: 1.9rem;
+
+            @include robotoFontSmall;
+            color: #637a88;
+            text-align: center;
+
+            span {
+              display: block;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      &__formSection {
+        padding-left: 6.3rem;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 3.2rem;
+
+        width: 100%;
+        max-width: 44.8rem;
+
+        border-left: 1px solid #b1dff7;
+        div:nth-child(2) {
+          display: flex;
+          justify-content: space-between;
+          max-width: 38.5rem;
+          input {
+            width: 100%;
+          }
+          p {
+            width: 4.8rem;
+            height: 4.8rem;
+
+            margin: 0;
+
+            border: 1px solid #6e757c;
+            box-sizing: border-box;
+            border-radius: 1rem;
+
+            color: #737174;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            @include center;
+          }
+        }
+        input {
+          margin-top: 0rem;
+          font-size: 1.4rem;
+          line-height: 1.7rem;
+          padding: 1.91rem 0 1.798rem 1.796rem;
+        }
+        span {
+          margin: 16px 0;
+        }
+        textarea {
+          margin-top: 0rem;
+          border-radius: 0.4rem;
+
+          max-width: 38.5rem;
+          max-height: 20rem;
+
+          border: 1px solid #6e757c;
+          box-sizing: border-box;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .createLoot {
+    max-width: 86rem;
+    &__container {
+      padding: 5.5rem 3.6rem 2.677rem 3.6rem;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .createLoot__modal {
+    overflow-y: auto;
+  }
+  .createLoot {
+    max-width: 57rem;
+    height: 98.8rem;
+    &__container {
+      padding: 3rem 3.6rem 2.677rem 3.6rem;
+      &__wrapper {
+        flex-direction: column;
+        align-items: center;
+        &__imgSection {
+          align-items: center;
+          margin-bottom: 3.6rem;
+        }
+        &__formSection {
+          border: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .createLoot {
+    &__container {
+      &__wrapper {
+        &__formSection {
+          div {
+            &:nth-child(2) {
+              p {
+                width: 4.2rem;
+                height: 4.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 610px) {
+  .createLoot {
+    max-width: 33rem;
+    // height: 82.8rem;
+    height: unset;
+    &__container {
+      padding: 3rem 0rem 2.677rem 0rem;
+      &__wrapper {
+        &__imgSection {
+          > span {
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+          }
+          > p {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+          }
+          > div {
+            width: 24rem;
+            height: 17rem;
+            margin-top: 2rem;
+            :nth-child(2) {
+              width: 2.5rem;
+            }
+            p {
+              font-size: 1.1rem;
+              line-height: 1.5rem;
+            }
+          }
+        }
+        &__formSection {
+          padding-left: 0;
+          align-items: center;
+          .input-block {
+            width: 24rem;
+            input {
+              width: 100%;
+            }
+          }
+          div {
+            &:nth-child(2) {
+              width: 24rem;
+              input#probability {
+                width: 19.4rem;
+              }
+            }
+            textarea {
+              max-width: 24rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .createLoot__modal {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 360px) {
+  .createLoot {
+    max-width: 30.5rem;
+    &__container {
+      &__wrapper {
+        &__imgSection {
+          > div {
+            width: 20rem;
+            height: 14.3rem;
+            margin-top: 2rem;
+            :nth-child(2) {
+              width: 2.5rem;
+            }
+            p {
+              font-size: 1.1rem;
+              line-height: 1.5rem;
+            }
+          }
+        }
+        &__formSection {
+          padding-left: 0;
+          align-items: center;
+          .input-block {
+            width: 20.8rem;
+            input {
+              width: 100%;
+            }
+          }
+          :nth-child(2) {
+            width: 24rem;
+            input {
+              width: 17.4rem;
+            }
+            p {
+              width: 4.2rem !important;
+              height: 4.2rem !important;
+            }
+          }
+          textarea {
+            max-width: 24rem;
+          }
+        }
+      }
+    }
+  }
+}

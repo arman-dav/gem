@@ -1,0 +1,10 @@
+.blogCollectionsItems{
+    background: #0F0E13;
+    padding-top: 57px;
+    padding-bottom: 87px;
+    padding-left: 220px;
+    padding-right: 180px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 0;
+}

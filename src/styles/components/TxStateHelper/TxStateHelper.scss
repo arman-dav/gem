@@ -1,0 +1,41 @@
+// These are the transaction states defined in TxStateHelper.tsx
+$txStates: 
+    TXSTATE_NONE, 
+    TXSTATE_INITIATING, 
+    TXSTATE_WALLET_CONFIRMATION_PENDING, 
+    TXSTATE_WALLET_CONFIRMATION_COMPLETED, 
+    TXSTATE_NETWORK_CONFIRMATION_PENDING, 
+    TXSTATE_NETWORK_CONFIRMATION_COMPLETED, 
+    TXSTATE_COMPLETED, 
+
+    TXSTATE_MOD_NONE, 
+    TXSTATE_MOD_CANCELED, 
+    TXSTATE_MOD_ERROR;
+
+// Parent class applied by TxStateHelper component
+.TXSTATE {
+    // Create classrules for each state:
+    @each $txState in $txStates {
+        // by default, hide anything that has this state class
+        .#{$txState} {
+            display: none;
+        }
+
+        // for ones that are marked with a --hide modifier, show them by default
+        .#{$txState}--hide {
+            display: initial;
+        }
+
+        // When the STATE is active... 
+        &.#{$txState} {
+            //...show the elements that have the class
+            .#{$txState} {
+                display: initial;
+            }
+            //...and hide the elements that have --hide modifier
+            .#{$txState}--hide {
+                display: none;
+            }
+        }
+    }
+}

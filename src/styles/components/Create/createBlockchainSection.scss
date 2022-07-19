@@ -1,0 +1,138 @@
+.createBlockchain {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  margin-top: 6.6rem;
+
+  &__upperPart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 620px;
+    height: 48px;
+
+    padding: 0 2rem 0 2.6rem;
+
+    border: 1px solid #6e757c;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    position: relative;
+
+    > div {
+      display: flex;
+      align-items: center;
+      position: relative;
+      grid-gap: 1rem;
+
+      min-width: 15.897rem;
+      max-height: 3.2rem;
+      padding-right: 4rem;
+
+      svg {
+        position: absolute;
+        right: 1.871rem;
+      }
+      p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        color: #c4c4c4;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      color: #c4c4c4;
+      cursor: pointer;
+    }
+    > svg {
+      position: absolute;
+      right: 2rem;
+    }
+    &--iconUp {
+      transform: rotate(180deg);
+    }
+  }
+  &__secondPart {
+    position: absolute;
+    z-index: 9999;
+
+    top: 5.8rem;
+
+    width: 559px;
+
+    background-color: #181721;
+    border: 1px solid #6e757c;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    > div {
+      margin: 3.1rem 0 3.6rem 0;
+
+      div {
+        display: flex;
+
+        width: 100%;
+
+        position: relative;
+        p {
+          font-size: 12px;
+          line-height: 15px;
+
+          margin: 0;
+          padding-top: 0.5rem + 0.75rem;
+          padding-bottom: 0.5rem + 0.75rem;
+          padding-left: 1.3rem + 2.4rem + 2.5rem;
+
+          color: #c4c4c4;
+
+          width: 100%;
+
+          cursor: pointer;
+        }
+        img {
+          position: absolute;
+          top: 0.899rem;
+          left: 2.4rem;
+
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+        &:first-child {
+          p {
+            padding-top: 0;
+          }
+          img {
+            top: -0.56rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .createBlockchain {
+    align-items: center;
+    &__upperPart {
+      width: 40rem;
+      height: 4.2rem;
+    }
+    &__secondPart {
+      width: 40rem;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .createBlockchain {
+    &__upperPart {
+      width: 26.5rem;
+    }
+    &__secondPart {
+      width: 26.5rem;
+    }
+  }
+}

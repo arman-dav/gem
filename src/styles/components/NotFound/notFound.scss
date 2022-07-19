@@ -1,0 +1,78 @@
+.notFound {
+  height: 100vh;
+  background-color: #181721;
+  @include center;
+  &__container {
+    max-width: 118.6rem;
+    width: 100%;
+    display: flex;
+
+    &__content {
+      > p {
+        font-size: 4.2rem;
+        line-height: 5.1rem;
+        color: #e5e5e5;
+      }
+      > span {
+        color: #686a74;
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+        display: block;
+        max-width: 60rem;
+      }
+      > div {
+        display: flex;
+        grid-column-gap: 1.9rem;
+        margin-top: 6rem;
+        > span {
+          width: 15.5rem;
+          height: 3.523rem;
+          background: #e3ae23;
+          @include center;
+          @include robotoFontBig;
+          border: 1px solid #e3ae23;
+          box-sizing: border-box;
+          border-radius: 4rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .notFound {
+    &__container {
+      flex-direction: column-reverse;
+      text-align: center;
+      &__content {
+        @include center;
+        flex-direction: column;
+      }
+      > div {
+        > svg {
+          width: 71.9%;
+          cursor: pointer;
+        }
+        > span {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .notFound {
+    &__container {
+      &__content {
+        > p {
+          font-size: 2.4rem;
+          line-height: 2.9rem;
+        }
+        > span {
+          font-size: 1.8rem;
+          line-height: 3.2rem;
+          max-width: 24.9rem;
+        }
+      }
+    }
+  }
+}

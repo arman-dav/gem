@@ -1,0 +1,201 @@
+.homeHowItWorksStep {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__bounce {
+    > div {
+      position: absolute;
+      top: -22.5rem;
+      @include center;
+      > span {
+        // left: 2.5rem;
+        display: block;
+
+        width: 0.8rem;
+        height: 0.8rem;
+
+        background: rgba(255, 210, 94, 0.9375);
+        border-radius: 50%;
+      }
+    }
+    // > span {
+    //   position: absolute;
+    //   top: -20rem;
+    //   // left: calc(24.3rem / 2);
+    //   left: 50%;
+    //   display: block;
+
+    //   width: 0.8rem;
+    //   height: 0.8rem;
+
+    //   background: rgba(255, 210, 94, 0.9375);
+    //   border-radius: 50%;
+    // }
+  }
+  .stepContainer {
+    padding: 2.6rem;
+    // background: chartreuse;
+    border: 1px solid #60666b;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px #b1dff7;
+    // filter: drop-shadow(0px 0px 10px #b1dff7);
+    border-radius: 6rem;
+    &_content {
+      // width: 80%;
+      // height: 100px;
+      min-height: 31.1rem;
+      &__titlePart {
+        display: flex;
+        justify-content: center;
+        &--title {
+          width: 65%;
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: bold;
+          font-size: 2.1rem;
+          line-height: 2.5rem;
+          text-align: center;
+          color: #e5e5e5;
+        }
+        &--stepContext {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.4rem;
+          line-height: 2.2rem;
+          text-align: center;
+          color: #e5e5e5;
+          opacity: 0.8;
+        }
+        &--icon {
+          width: 6rem;
+          height: 12rem;
+          margin-left: 10px;
+        }
+        &--display {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      &__text {
+        width: 100%;
+        // background: cornflowerblue;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        text-align: center;
+        color: #e5e5e5;
+        opacity: 0.8;
+      }
+    }
+    // &:last-child {
+    //   &:active {
+    //     -webkit-tap-highlight-color: transparent;
+    //   }
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+    //   cursor: pointer;
+    //   width: 80%;
+    //   padding: 3rem;
+    //   min-height: 34rem;
+    //   border: 1px solid #60666b;
+    //   box-sizing: border-box;
+    //   box-shadow: 0px 0px 7px #b1dff7;
+    //   border-radius: 6rem;
+    //   // background: gold;
+    //   // &titles-container {
+    //   //   font-family: Roboto;
+    //   //   font-style: normal;
+    //   //   font-weight: bold;
+    //   //   font-size: 21px;
+    //   //   line-height: 25px;
+    //   //   display: flex;
+    //   //   align-items: center;
+    //   //   text-align: center;
+
+    //   //   color: #e5e5e5;
+    //   // }
+    //   span:nth-child(1) {
+    //     margin-bottom: 10px;
+    //   }
+    //   h3 {
+    //     font-family: Roboto;
+    //     font-style: normal;
+    //     font-weight: bold;
+    //     font-size: 21px;
+    //     line-height: 25px;
+    //     display: flex;
+    //     align-items: center;
+    //     text-align: center;
+
+    //     color: #e5e5e5;
+    //   }
+    //   p {
+    //     font-family: "Roboto";
+    //     font-size: 2.1rem;
+    //     line-height: 2.5rem;
+    //     color: #e5e5e5;
+    //     text-transform: uppercase;
+    //     text-align: center;
+    //   }
+    //   section {
+    //     width: 100%;
+    //     // background: green;
+    //     display: flex;
+    //     justify-content: center;
+    //   }
+    //   span {
+    //     color: #bcbbbc;
+    //     @include robotoFontSmall;
+    //     text-align: center;
+    //     display: block;
+    //     margin-bottom: 10px;
+    //   }
+    // }
+  }
+}
+
+@media (max-width: 1024px) {
+  .homeHowItWorksStep {
+    &__bounce {
+      span {
+        left: 11rem;
+        top: -2.1rem;
+      }
+    }
+  }
+}
+
+// @media (max-width: 320px) {
+//   .homeHowItWorksStep {
+//     &__bounce {
+//       display: none;
+//     }
+//     div {
+//       &:last-child {
+//         width: 21.1rem;
+//         height: 21.094rem;
+//         padding: 0 2.4rem;
+//         p {
+//           font-size: 1.5rem;
+//           line-height: 1.8rem;
+//         }
+//         span {
+//           font-size: 1.2rem;
+//           line-height: 2.2rem;
+//           &:nth-child(2) {
+//             max-width: unset;
+//           }
+//           &:nth-child(4) {
+//             max-width: unset;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+@import "../../utils/mixin.scss";
+
+.header {
+  &__container {
+    height: 8.5rem;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    background-color: #0f0e13;
+    z-index: 100;
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      bottom: -3rem;
+      left: -3rem;
+      padding: 0.4rem;
+      // padding: 0.2rem 0.5rem;
+      background: #2e2f37;
+      color: white;
+      box-shadow: 0px 0px 15px rgb(0 0 0 / 50%);
+      font-size: 1.3rem;
+      width: 10rem;
+      // display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2rem;
+    }
+    .tooltip-parent {
+      position: relative;
+    }
+    .tooltip-parent:hover .tooltip {
+      display: flex;
+    }
+    .tooltip::before {
+      content: "";
+      position: absolute;
+      background: #2e2f37;
+      width: 1rem;
+      height: 1rem;
+      transform: rotate(45deg);
+      top: -0.5rem;
+      left: 4rem;
+    }
+
+    &--blur {
+      height: 8.5rem;
+      display: flex;
+      justify-content: center;
+      filter: blur(10px);
+
+      position: fixed;
+      width: 100%;
+      background-color: #0f0e13;
+
+      z-index: 100;
+    }
+    &__scrolled {
+      height: 8.5rem;
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+      background-color: #0f0e13;
+
+      opacity: 0.7;
+    }
+
+    &__wrapper {
+      width: 100%;
+      display: flex;
+      padding: 1.3rem 0rem 1.545rem 0rem;
+      justify-content: space-between;
+      max-width: 124.3rem;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    color: #ffffff;
+
+    font-family: "Squada One";
+    font-size: 4.2rem;
+    line-height: 2rem;
+
+    cursor: pointer;
+
+    .logo-svg {
+      max-width: 300px;
+      height: auto;
+    }
+  }
+  &__navigation {
+    // width: 50%;
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 4.5rem;
+
+    &__links {
+      width: 60%;
+      display: flex;
+      grid-gap: 4.5rem;
+      justify-content: space-between;
+      align-items: center;
+      input {
+        height: 3rem;
+        border-radius: 0.5rem;
+        padding-left: 0.5rem;
+        border: 1px solid rgb(96, 102, 107);
+        background: #0f0e13;
+        color: #fff;
+      }
+      input:focus {
+        outline: none;
+      }
+
+      &--link {
+        @include center;
+        &--bounce {
+          > div {
+            position: absolute;
+            top: -1.8rem;
+            @include center;
+
+            > span {
+              // left: 2.5rem;
+              display: block;
+
+              width: 0.4rem;
+              height: 0.4rem;
+
+              background: rgba(255, 210, 94, 0.9375);
+              border-radius: 50%;
+            }
+          }
+        }
+        &--bounceMedia {
+          > div {
+            position: absolute;
+            top: 0rem;
+            left: 20rem;
+            @include center;
+
+            > span {
+              // left: 2.5rem;
+              display: block;
+
+              width: 0.4rem;
+              height: 0.4rem;
+
+              background: rgba(255, 210, 94, 0.9375);
+              border-radius: 50%;
+            }
+          }
+        }
+        a,
+        span {
+          text-decoration: none;
+          font-size: 1.8rem;
+          line-height: 2.1rem;
+          color: #ffffff;
+          display: block;
+        }
+        span {
+          cursor: default;
+        }
+        &:first-child:hover {
+        }
+      }
+    }
+    &__btn__container {
+      display: flex;
+      // padding-left: 3.2rem;
+      grid-gap: 4.5rem;
+      div {
+        @include center;
+      }
+      &--div {
+        &--white {
+          button {
+            color: #ffcf53;
+            font-family: "Roboto";
+            font-size: 2.1rem;
+            line-height: 2.5rem;
+            background-color: #0f0e13;
+            border: none;
+          }
+        }
+        &--black {
+          // margin-left: 2.2rem;
+          button {
+            @include center;
+            border-radius: 4rem;
+            width: 15.5rem;
+            background-color: #ffcf53;
+            min-width: 14.5rem;
+            color: #000000;
+            border: none;
+            font-size: 1.6rem;
+            font-weight: bold;
+            line-height: 2.1em;
+          }
+          svg {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+// @media (max-width: 1150px) {
+//   .header {
+//     &__navigation {
+//       // width: 68%;
+//       margin-right: 2.3rem;
+//     }
+//   }
+// }
+
+@media (max-width: 1265px) {
+  .header {
+    &__navigation {
+      // width: 68%;
+      margin-right: 2.3rem;
+    }
+    .tooltip {
+      display: none;
+    }
+    &__logo {
+      font-size: 3.4rem;
+      line-height: 2rem;
+    }
+    &__container {
+      &__wrapper {
+        padding-right: 2.6rem;
+        padding-left: 2.6rem;
+      }
+    }
+    &__navigation {
+      justify-content: flex-end;
+      margin-right: 0;
+      &--mobile {
+        display: flex;
+        align-items: center;
+        grid-gap: 2rem;
+        > svg {
+          cursor: pointer;
+          width: 4.5rem;
+          height: 4.5rem;
+        }
+        &--burgerMenu {
+          position: relative; //* for .headerMobileMenu ,.headerMobileMenu is absolute
+        }
+      }
+      &__links {
+        display: none;
+      }
+      &__btn__container {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    &__navigation {
+      &__btn__container--div--black button {
+        width: 20rem;
+        height: 3rem;
+      }
+      > svg {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+
+    &__logo {
+      margin-left: -1rem;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .header {
+    &__container {
+      &--blur {
+        z-index: 1;
+      }
+    }
+    &__navigation {
+      > svg {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .logo-svg {
+    width: 200px;
+    height: 200px;
+  } 
+}

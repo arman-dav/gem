@@ -1,0 +1,197 @@
+.creatorContainer {
+  @include center;
+  flex-direction: column;
+  background-color: #0f0e13;
+  // .allItems__check {
+  //   width: 100%;
+  //   display: flex;
+  //   justify-content: flex-end;
+  //   align-items: center;
+  //   margin: 2rem 0;
+  // }
+  &__backgroundImg {
+    width: 100%;
+    height: 28.4rem;
+    background: #eceff4;
+    @include center;
+    flex-direction: column;
+    img {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+  &__content {
+    margin-top: -7.4rem;
+    width: 79.23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > div {
+      width: 100%;
+      max-width: 105rem;
+      @include center;
+      flex-direction: column;
+      text-align: center;
+    }
+    &__type {
+      margin-top: 6rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-column-gap: 6rem;
+      > div {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: #ffffff;
+        cursor: pointer;
+      }
+      .active {
+        border-bottom: 1px solid #b1dff7;
+      }
+    }
+
+    &__userImg {
+      width: 14.7rem;
+      height: 14.7rem;
+      @include center;
+      object-fit: cover;
+      border-radius: 50%;
+      background: #d3d9e1;
+      border: 3px solid #ffffff;
+      box-sizing: border-box;
+    }
+    &__userName {
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      font-size: 3.1rem;
+      line-height: 3.8rem;
+      color: #eceff4;
+    }
+    &__itemsOwners {
+      width: 21.5rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      grid-gap: 1.8rem;
+      justify-content: center;
+      &--items,
+      &--owners {
+        // width: 10.7rem;
+        height: 3.5rem;
+        padding: 0 4.2rem;
+        @include center;
+
+        border: 1px solid #6e757c;
+        box-sizing: border-box;
+        border-radius: 4rem;
+
+        font-family: "Roboto";
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+
+        color: #eceff4;
+      }
+    }
+    &__searchPart {
+      width: 100%;
+      height: 4.5rem;
+      @include center;
+      gap: 2.669rem;
+      padding-top: 2.45rem;
+      max-width: 101.5rem;
+      // padding-right: 3.5rem;
+      &--search {
+        width: 100%;
+        height: 100%;
+        max-width: 40.6rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        border-bottom: 1px solid #c4c4c4;
+        grid-gap: 1.4rem;
+        input {
+          width: 93%;
+          height: 95%;
+          border: none;
+          outline: none;
+
+          font-family: "Roboto";
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          background-color: #0f0e13;
+        }
+      }
+      &--price {
+        width: 35.9%;
+        height: 100%;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+        border: none;
+        outline: none;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        border-radius: 4px;
+      }
+      &--button {
+        width: 10.2rem;
+        height: 100%;
+        @include buttonStyle;
+      }
+    }
+    &__sliderSection {
+      text-align: left;
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 340px) {
+  .creatorContainer {
+    &__content {
+      &__userName {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+      }
+      &__userImg {
+        width: 12.8rem;
+        height: 12.8rem;
+        > img {
+          width: 12.8rem;
+          height: 12.8rem;
+        }
+      }
+      &__itemsOwners {
+        width: unset;
+        grid-gap: 1.6rem;
+        &--items,
+        &--owners {
+          width: 7.9rem;
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+        }
+      }
+      &__searchPart {
+        &--search {
+          grid-gap: 0.9rem;
+          > input {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+          }
+        }
+      }
+    }
+    &__backgroundImg {
+      max-height: 14.6rem;
+    }
+  }
+}

@@ -1,0 +1,266 @@
+.footer {
+  &__container {
+    width: 100%;
+    background-color: #191824;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--blur {
+      width: 100%;
+      filter: blur(10px);
+      background-color: #0f0e13;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__wrapper {
+      padding: 7.5rem 6.6rem 7rem 5.7rem;
+      display: flex;
+      max-width: 106rem;
+      position: relative;
+      justify-content: space-between;
+    }
+  }
+  &__description {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    &--logo {
+      font-family: "Squada One";
+      font-size: 3.4rem;
+      line-height: 2rem;
+
+      color: #ffffff;
+    }
+
+    &--desc {
+      width: 60%;
+      padding-top: 1.234rem;
+      p {
+        min-width: 31rem;
+        opacity: 0.7;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: #eceff4;
+      }
+    }
+  }
+  // #69696b
+  &__services {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.9rem;
+    font-size: 1.4rem;
+    > div {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 1.5rem;
+      div {
+        &:first-child {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1.4rem;
+          line-height: 2rem;
+          color: #c4c4c4;
+        }
+        &:last-child {
+          padding-top: 1.232rem;
+          a {
+            padding-bottom: 1.543rem;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            text-decoration: none;
+            color: #eceff4;
+            cursor: pointer;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+  &__copyright {
+    width: 92%;
+    max-width: 128.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.987rem;
+    font-size: 1.2rem;
+    line-height: 20px;
+    border-top: 1px solid #333236;
+    position: relative;
+    &--left {
+      color: #69696b;
+    }
+    &--right {
+      a {
+        padding-left: 0.5rem;
+        text-decoration: none;
+        color: #69696b;
+      }
+    }
+  }
+}
+
+.social-icon-group {
+  display: flex;
+  flex-direction: row !important;
+  min-width: 150px;
+
+  .social-icon-link + .social-icon-link {
+    margin-left: -0.7rem;
+  }
+}
+
+.social-icon-link {
+  color: white;
+  opacity: 0.65;
+  display: inline-block;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 0.4),
+    rgba(51, 18, 80, 0.694),
+    transparent
+  );
+  padding: 1.8rem;
+  font-size: 4rem;
+  transform: scale(0.9);
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease-out;
+  border: 1px solid white;
+
+  &:hover {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1110px) {
+  .footer {
+    &__services {
+      // width: 50%;
+    }
+  }
+}
+@media (max-width: 910px) {
+  .footer {
+    &__container {
+      margin-top: 4rem;
+    }
+    &__services {
+      width: 80%;
+    }
+    &__description {
+      &--desc {
+        p {
+          min-width: 24rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 893px) {
+  .footer {
+    &__services {
+      width: 80%;
+    }
+    &__description {
+      &--desc {
+        p {
+          min-width: 16rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 621px) {
+  .social-icon-group {
+    margin-bottom: 2rem;
+    grid-row-gap: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer {
+    &__container {
+      &__wrapper {
+        flex-direction: column;
+        padding: unset;
+        padding-top: 5.1rem;
+      }
+    }
+    &__description {
+      width: 100%;
+      align-items: center;
+      &--desc {
+        width: 100%;
+        p {
+          max-width: 22.5rem;
+          min-width: unset;
+
+          font-size: 1.2rem;
+          line-height: 2rem;
+
+          text-align: center;
+        }
+      }
+      &--logo {
+        font-family: "Squada One";
+        font-size: 3.4rem;
+        line-height: 2rem;
+      }
+    }
+    &__services {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      > div {
+        grid-gap: unset;
+        div {
+          &:first-child {
+            font-size: 1.2rem;
+            line-height: 2rem;
+          }
+          &:last-child {
+            a {
+              justify-content: center;
+              font-size: 1.2rem;
+              line-height: 2rem;
+              padding-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+    &__copyright {
+      flex-direction: column;
+      max-width: 24.5rem;
+      div {
+        &:first-child {
+          p {
+            font-size: 1.2rem;
+            line-height: 2rem;
+
+            width: 32rem;
+            text-align: center;
+          }
+        }
+        &:last-child {
+          display: flex;
+          grid-gap: 1.8rem;
+        }
+      }
+    }
+  }
+}

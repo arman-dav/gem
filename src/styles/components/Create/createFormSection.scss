@@ -1,0 +1,202 @@
+.input-block {
+  position: relative;
+  &--hide {
+    display: none;
+  }
+  position: relative;
+
+  input {
+    outline: none;
+
+    width: 62rem;
+    height: 4.8rem;
+
+    margin-top: 1.8rem;
+    padding-left: 2.6rem;
+
+    background-color: #0f0e13;
+    border: 1px solid #6e757c;
+    box-sizing: border-box;
+    border-radius: 1rem;
+
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #eceff4;
+
+    &:focus {
+      border-color: #b1dff7;
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      box-shadow: 0 0 0 3000px #0f0e13 inset;
+      -webkit-text-fill-color: #eceff4;
+    }
+  }
+  input#minimum,
+  input#maximum,
+  input#raffleStartDate,
+  input#raffleEndDate {
+    width: 27.9rem;
+  }
+  input#nameCreateLoot {
+    max-width: 38.5rem;
+    width: 100%;
+  }
+  input#probability {
+    width: 32.4rem;
+  }
+  span {
+    position: absolute;
+    top: 0;
+    left: 17px;
+
+    margin: 32px 0;
+    padding: 0 1rem;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    color: #6c757d;
+
+    display: flex;
+    align-items: center;
+
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: none;
+    pointer-events: none;
+  }
+
+  input:valid + .placeholder,
+  input:focus + .placeholder {
+    transform: scale(0.8) translateY(-26px);
+    background: #0f0e13;
+  }
+
+  input:focus + .placeholder {
+    color: #b1dff7;
+  }
+}
+.create__container__formSection {
+  padding-top: 7.2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.6rem;
+  max-width: 62rem;
+
+  &--minMaxDiv {
+    display: flex;
+    grid-gap: 6.2rem;
+  }
+
+  &--descriptionDiv {
+    position: relative;
+    p {
+      position: absolute;
+      bottom: 11px;
+      left: 24px;
+
+      font-family: "Roboto";
+      font-size: 0.8rem;
+      line-height: 2.2rem;
+
+      color: #3e4147;
+    }
+    textarea {
+      padding: 1.91rem 0 0 1.796rem;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      color: #eceff4;
+
+      max-width: 62rem;
+
+      background-color: #0f0e13;
+      border: 1px solid #6e757c;
+      box-sizing: border-box;
+      border-radius: 10px;
+
+      outline: none;
+
+      &:focus {
+        border-color: #b1dff7;
+      }
+    }
+  }
+}
+.CreateFormSectionLabel {
+  &--hide {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .input-block {
+    input {
+      width: 40rem;
+      height: 4.2rem;
+    }
+    input#minimum,
+    input#maximum,
+    input#raffleStartDate,
+    input#raffleEndDate {
+      width: 40rem;
+    }
+    span {
+      margin: 3.3rem 0;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+  }
+  .create__container__formSection {
+    align-items: center;
+    &--minMaxDiv {
+      flex-direction: column;
+      grid-gap: 3.4rem;
+    }
+    &--descriptionDiv {
+      textarea {
+        max-width: 40rem;
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .input-block {
+    input {
+      width: 26.5rem;
+    }
+    input#minimum,
+    input#maximum,
+    input#raffleStartDate,
+    input#raffleEndDate {
+      width: 26.5rem;
+    }
+    span {
+      margin: 33px 0;
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
+  }
+  .create__container__formSection {
+    align-items: center;
+    padding-top: 3.6rem;
+    row-gap: 3rem;
+
+    &--minMaxDiv {
+      flex-direction: column;
+      grid-gap: 3.4rem;
+    }
+    &--descriptionDiv {
+      textarea {
+        max-width: 26.5rem;
+      }
+      p {
+        width: 90%;
+        left: 1rem;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}

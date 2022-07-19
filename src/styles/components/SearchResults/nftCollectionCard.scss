@@ -1,0 +1,273 @@
+.nftCollectionCard {
+  width: 23.777rem;
+  height: 35.7rem;
+  box-sizing: border-box;
+  border-radius: 0.4rem;
+  .gemType {
+    background: rgba(177, 223, 247, 0.15);
+    border-radius: 1rem;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #b1dff7;
+    padding: 0.3rem 0.5rem;
+  }
+  .buyNow--disable {
+    opacity: 0.7;
+  }
+  .buyNow--closed {
+    background-color: transparent !important;
+    color: white !important;
+  }
+  h4 {
+    font-family: "Montserrat";
+    font-weight: lighter;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #ffffff;
+  }
+  &__imgSection {
+    background-color: #16151a;
+    height: 24.467rem;
+    position: absolute;
+    z-index: 3;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-bottom: 0.9rem;
+    // border-radius: 2rem;
+
+    &__icons {
+      opacity: 0;
+      display: flex;
+      grid-column-gap: 0.5rem;
+      transition: 0.3s;
+    }
+    &--iconPart {
+      top: 0;
+      position: absolute;
+      width: calc(23.777rem - 3rem);
+      padding: 1.6rem 1.5rem 0 1.5rem;
+      display: flex;
+      opacity: 0.7;
+      transition: opacity 200ms;
+      z-index: 2;
+      div {
+        display: flex;
+        align-items: center;
+        span {
+          padding-left: 0.772rem;
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+          color: #fff;
+        }
+      }
+      svg {
+        cursor: pointer;
+        color: #312f49;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &__imgDiv {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 23.7rem;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      border-radius: 2rem;
+      &:before {
+        content: "";
+        background-image: var(--imageUrl);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 1px;
+        z-index: 0;
+        background-size: cover;
+        filter: blur(10px);
+      }
+
+      &--noImage {
+        width: 9rem !important;
+        height: 9rem !important;
+        border-radius: 0 !important;
+      }
+      img,
+      video {
+        transition: transform 200ms;
+        max-width: 100%;
+        object-fit: cover;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        border-radius: 2rem;
+      }
+      &:hover {
+        img,
+        video {
+          transform: scale3d(1.1);
+        }
+      }
+      p {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        text-align: center;
+        color: #6e757c;
+      }
+
+      .buyNow {
+        position: absolute;
+        right: 0.977rem;
+        bottom: 1.067rem;
+
+        background: #181721;
+        box-shadow: 0rem 0.4rem 2rem rgba(0, 0, 0, 0.5);
+        border-radius: 0.8rem;
+        width: 7.5rem;
+        height: 2.9rem;
+        z-index: 1;
+        @include center;
+
+        font-family: "Roboto";
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        cursor: pointer;
+        color: #ffcf53;
+      }
+    }
+  }
+  &__infoSection {
+    padding: 1.535rem 0 1.571rem 0rem;
+    background-color: #fff;
+
+    background: #181721;
+    box-shadow: 0px 0.4rem 2rem rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    @include center;
+    flex-direction: column;
+    &--usd_price {
+      font-family: "Roboto";
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #eceff4;
+      margin-top: 1.5rem;
+    }
+    &--container_button {
+      display: flex;
+      grid-column-gap: 0.8rem;
+      margin-top: 0.5rem;
+      &--button {
+        min-width: 1.9rem;
+        padding: 0 0.4rem;
+        height: 1.7rem;
+        background: rgba(177, 223, 247, 0.15);
+        border-radius: 1rem;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 13px;
+        margin-top: 1rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #b1dff7;
+        position: relative;
+      }
+      &--button:hover .module {
+        display: block;
+      }
+    }
+    > div {
+      max-height: calc(3.329rem / 2);
+      display: flex;
+      width: 100%;
+      max-width: 20rem;
+      justify-content: space-between;
+      align-items: center;
+
+      &:first-child {
+        padding-bottom: 0.5rem;
+        span {
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+          font-weight: 500;
+          color: #ffffff;
+        }
+        p {
+          font-family: "Montserrat";
+          font-weight: lighter;
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+          color: #ffcf53;
+          text-align: right;
+          font-weight: 700;
+        }
+      }
+      &:last-child {
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+        color: #ffffff;
+        border-top: 1px solid #60666b;
+        span {
+          font-size: 7px;
+          margin-top: 2px;
+          padding: 0 5px;
+          svg {
+            margin-left: 0.857px;
+          }
+        }
+      }
+    }
+  }
+}
+.nftCollectionCard--container {
+  position: relative;
+  height: 26.467rem;
+}
+
+.nftCollectionCard:hover .nftCollectionCard__imgSection__icons {
+  opacity: 1;
+}
+
+.nftCollectionCard_fractionalize::before {
+  right: -8px;
+  top: 0px;
+  height: 24.5rem;
+  z-index: 1;
+}
+.nftCollectionCard_fractionalize::after {
+  right: -40px;
+  top: 0px;
+  height: 24.5rem;
+  z-index: 0;
+  right: -6%;
+}
+
+.nftCollectionCard_fractionalize::before,
+.nftCollectionCard_fractionalize::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  background-image: var(--imageUrl);
+  background-size: cover;
+  overflow: hidden;
+  transition: 0.3s;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #1e1c2f;
+  box-shadow: 0px 4px 20px rgb(0 0 0 / 80%);
+  border-radius: 20px;
+  background: #1e1c2f;
+  border-radius: 20px;
+}

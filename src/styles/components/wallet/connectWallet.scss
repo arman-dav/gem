@@ -1,0 +1,214 @@
+@import "../../utils/mixin.scss";
+
+.connectWalletCard__container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(185, 190, 199, 0.1);
+  width: 100%;
+  // padding-right: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  &--walletContent_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 74%;
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: 100%;
+
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: #eceff4;
+  }
+
+  &:last-child {
+    border-bottom: unset;
+  }
+}
+
+.connectWallet {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  border-radius: 0.4rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+
+  &--hide {
+    display: none;
+  }
+  &__wrapper {
+    width: 30.6rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #16151a;
+    border: 2px solid #e3ae23;
+    box-sizing: border-box;
+    border-radius: 2rem;
+
+    margin-top: 10rem;
+    &__container {
+      display: flex;
+      flex-direction: column;
+      padding: 3.4rem 3.8rem 3.7rem 2.6rem;
+      &--heading {
+        // margin-bottom: 2.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(185, 190, 199, 0.5);
+        &--title {
+          margin: 0;
+          margin-bottom: 0.4rem;
+          font-size: 2rem;
+          line-height: 2.4rem;
+          color: #eceff4;
+        }
+      }
+      &__wallets {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        &--walletDiv {
+          cursor: pointer;
+          padding: 1.3rem 0 1.3rem 0rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          &--iconDiv {
+            max-width: 5rem;
+            max-height: 5rem;
+            width: 5.3rem;
+            height: 5.3rem;
+            @include center;
+            background-color: #d3d9e1;
+            border-radius: 2rem;
+            svg {
+              max-width: 3.238rem;
+              max-height: 3.304rem;
+            }
+          }
+          p {
+            // padding-left: 2.4rem;
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+            margin-bottom: 0;
+            color: #eceff4;
+          }
+          &--reloadDiv {
+            display: flex;
+            // flex-direction: column;
+            align-items: center;
+            // text-align: center;
+            gap: 0.5rem;
+
+            span {
+              color: red;
+              font-size: 1rem;
+              max-width: 21.2rem;
+              line-height: 1.5rem;
+            }
+            svg {
+              width: 2.5rem;
+              height: 2.5rem;
+              margin-bottom: 2rem;
+              animation: ReloadAnimation 1s linear 1;
+            }
+            &--hide {
+              display: none;
+            }
+            &:hover {
+              svg {
+                animation: ReloadAnimationHover 1s linear 1;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+    &--btnDiv {
+      @include center;
+      grid-gap: 1.1rem;
+      background-color: #0b0b0d;
+      color: #eceff4;
+      padding: 2rem 0;
+      margin-top: 2.8rem;
+      border: 2px solid #e3ae23;
+      border-radius: 2rem;
+      box-sizing: border-box;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+
+      width: 30.6rem;
+    }
+  }
+}
+
+@keyframes ReloadAnimation {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes ReloadAnimationHover {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 320px) {
+  .connectWallet {
+    &__wrapper {
+      border-radius: 2rem 0 0 2rem;
+      width: 28.4rem;
+      margin-top: 1.6rem;
+      &--btnDiv {
+        border-radius: 2rem 0px 0px 2rem;
+        width: 28.4rem;
+        margin-top: 1rem;
+        > svg {
+          max-width: 3rem;
+          max-height: 3rem;
+        }
+      }
+      &__container {
+        padding-bottom: 0;
+        &--heading {
+          &--title {
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+          }
+        }
+        &__wallets--walletDiv {
+          padding-top: 0.8rem;
+          padding-bottom: 2rem;
+          > p {
+            padding-left: 1.8rem;
+          }
+          &--iconDiv {
+            width: 3rem;
+            height: 3rem;
+            > div > svg {
+              max-width: 1.6rem;
+              max-height: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

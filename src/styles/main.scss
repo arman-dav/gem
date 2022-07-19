@@ -1,0 +1,130 @@
+@import "components/components.scss";
+@import "./layout/layout.scss";
+//header
+@import "./layout/header/header.scss";
+@import "./layout/header/headerMobileMenu.scss";
+
+@import "./layout/footer.scss";
+@import "./utils/mixin.scss";
+@import "./utils/loading-spinner.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: "Montserrat";
+  button {
+    cursor: pointer;
+  }
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+* {
+  .Toastify__toast {
+    border: 1px solid #fecf5366;
+    border-radius: 12px !important;
+  }
+
+  .Toastify__toast-body > div:last-child {
+    font-size: 11px;
+  }
+
+  .toast-background {
+    color: #e5e5e5 !important;
+  }
+
+  .toast-progress-bar {
+    background: #fecf53 !important;
+  }
+
+  .toast-tx {
+    line-height: 2rem;
+
+    &__text { 
+      text-transform: capitalize;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+    &__link {
+      font-size: 1.4rem;
+      & *:not(:first-child) {
+        margin-left: 1rem;
+      }
+
+      a, 
+      a:visited
+      a:active {
+        color: #fecf53 !important;
+      }
+    }
+  }
+}
+@media (max-width:480px){
+  * {
+    .Toastify__toast {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .Toastify__toast-body > div:last-child {
+      font-size: 11px;
+    }
+  }
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #0f0e13;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

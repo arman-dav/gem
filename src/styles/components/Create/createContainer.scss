@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+
+.create {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #0f0e13;
+
+  &--blur {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    filter: blur(12px);
+    background-color: #0f0e13;
+  }
+
+  &__container {
+    margin-top: 14rem;
+    margin-bottom: 30rem;
+    width: 100%;
+    max-width: 128rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &--scroll {
+    position: absolute;
+    top: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .create {
+    &__container {
+      margin-top: 7rem;
+      margin-bottom: 6rem;
+    }
+  }
+}

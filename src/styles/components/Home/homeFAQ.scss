@@ -1,0 +1,176 @@
+.homeFAQ {
+  width: 100%;
+
+  background-color: #16151a;
+  box-sizing: border-box;
+  &__faqSection {
+    max-width: 144rem;
+    @include center;
+    flex-direction: column;
+    position: relative;
+    padding: 13.6rem 0 17.1rem 0;
+    margin: 0 auto;
+    background: url("../../../assets/home/faqBackgroundIcon.svg");
+    background-repeat: no-repeat;
+    background-size: 29%;
+    background-position: right 4.3rem;
+
+    &__container {
+      width: 70.487%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      max-width: 101.5rem;
+      &__data {
+        > p {
+          font-family: "Roboto";
+          font-size: 2.5rem;
+          line-height: 2.9rem;
+          color: #e5e5e5;
+          margin: 0;
+          padding-bottom: 4.7rem;
+        }
+        display: flex;
+        flex-direction: column;
+        &--questionDiv {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          flex-direction: column;
+          max-height: 30rem;
+          transition: max-height 0.7s ease-in;
+          overflow: hidden;
+          &--hide {
+            max-height: 7.5rem;
+            overflow: hidden;
+            transition: max-height 0.7s ease-out;
+          }
+          &--question {
+            cursor: pointer;
+
+            width: 100%;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            color: #c0c2c7;
+            display: flex;
+            align-items: center;
+            grid-gap: 1.5rem;
+            justify-content: space-between;
+            > span {
+              display: flex;
+              align-items: center;
+              grid-gap: 1rem;
+              svg {
+                min-width: 1.9rem;
+              }
+            }
+          }
+
+          &--iconDiv {
+            border-radius: 5rem;
+            width: 0.8rem;
+            height: 0.8rem;
+            border: 1px solid rgba(255, 210, 94, 0.9375);
+            @include center;
+          }
+          &--answerDiv {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            max-height: 19.6rem;
+            &--hide {
+              overflow: hidden;
+              margin-left: 3.5rem;
+              justify-content: flex-end;
+              max-height: 18.5rem;
+            }
+            &--answer {
+              font-size: 1.8rem;
+              line-height: 3.2rem;
+              font-weight: 500;
+              color: #64666d;
+              max-width: 89.9rem;
+              overflow-y: scroll;
+              padding-right: 8.1rem;
+
+              scrollbar-color: rgba(255, 210, 94, 0.7) #0f0e13;
+              scrollbar-width: thin;
+              &::-webkit-scrollbar {
+                width: 0.2rem;
+              }
+              &::-webkit-scrollbar-thumb {
+                background: rgba(255, 210, 94, 0.7);
+                border-radius: 9.9rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 582px) {
+  .homeFAQ {
+    &__faqSection {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+
+      background-size: 120%;
+      background-position: -200% 4.3rem;
+      > svg {
+        display: none;
+      }
+      &__container {
+        &__data {
+          &--questionDiv {
+            max-height: 58.4rem;
+            margin-bottom: 2rem;
+            &--hide {
+              max-height: 13rem;
+            }
+            &--question {
+              span {
+                min-width: 24rem;
+
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+
+                p {
+                  font-size: 1.2rem;
+                  line-height: 2rem;
+
+                  min-height: 11rem;
+                }
+                svg {
+                  margin-top: 2rem;
+                }
+              }
+            }
+            &--answerDiv {
+              min-height: 44rem;
+              &--hide {
+                margin-left: 4.6rem;
+              }
+              &--answer {
+                font-size: 1.1rem;
+                line-height: 2.2rem;
+
+                max-width: 31.9rem;
+
+                padding-right: 5.5rem;
+
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,194 @@
+.nftDetailPriceHistory {
+  max-width: 106.3rem;
+  width: 107rem;
+  height: 48rem;
+  margin: 0 auto;
+  background: #181721;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding-left: 3rem;
+  padding-top: 2rem;
+  padding-right: 5.6rem;
+  overflow-y: scroll;
+  position: relative;
+  .recharts-wrapper {
+    width: 100% !important;
+  }
+  &--noDataDisplay {
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    margin-top: 14rem;
+    align-items: center;
+  }
+
+  .graph-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    svg {
+      width: 100%;
+    }
+  }
+
+  .graph-wrapper > .y-axis-wrapper {
+    background: white;
+    position: sticky;
+    left: 0;
+    z-index: 3;
+  }
+  &--content {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    grid-column-gap: 2rem;
+    margin-bottom: 4.4rem;
+
+    > div {
+      padding-bottom: 0.5rem;
+
+      font-family: Montserrat;
+      font-weight: 600;
+      font-size: 16px;
+      color: #ffffff;
+    }
+    // > div:nth-child(1) {
+    //   border-bottom: 0.5px solid #fff;
+    // }
+  }
+
+  &--table {
+    width: 100%;
+    margin-top: 4.4rem;
+
+    &--title {
+      border-spacing: 0;
+      border-collapse: collapse;
+      border-bottom: 1.5px solid #60666b;
+      th {
+        font-family: Roboto;
+        font-size: 13px;
+        line-height: 15px;
+        font-variant: small-caps;
+        color: #c4c4c4;
+        font-weight: 400;
+      }
+    }
+    &--event,
+    &--price {
+      font-family: Montserrat;
+      font-size: 1.1rem;
+      color: #c4c4c4;
+    }
+    &--date svg {
+      margin-left: 1px;
+    }
+    &--from,
+    &--date,
+    &--to {
+      font-family: Montserrat;
+      font-size: 1.1rem;
+      color: #b1dff7;
+    }
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
+  }
+
+  td,
+  th {
+    border-bottom: 1px solid rgba(96, 102, 107, 0.3);
+    text-align: left;
+    padding: 8px;
+    padding-left: 1.5rem;
+  }
+  td {
+    padding: 2rem;
+    padding-left: 1.5rem;
+  }
+  tr:last-child td {
+    border: none;
+  }
+  tr:nth-child(1) {
+    th {
+      margin-left: 1.5rem;
+    }
+  }
+  .rechart {
+    position: absolute;
+    left: -1rem;
+    margin-right: 50px;
+    .recharts-cartesian-grid-vertical {
+      display: none !important;
+    }
+    .recharts-cartesian-grid-horizontal line:first-child,
+    .recharts-cartesian-grid-horizontal line:last-child {
+      display: none !important;
+    }
+  }
+}
+// .recharts-tooltip-wrapper
+//   .recharts-tooltip-wrapper-right
+//   .recharts-tooltip-wrapper-bottom {
+//   background: #14131a !important;
+//   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+//   border-radius: 10px;
+//   width: 14.2rem;
+//   height: 7.3rem;
+//   .recharts-default-tooltip {
+//     background: #14131a;
+//   }
+// }
+.recharts-default-tooltip {
+  background: #14131a !important;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 1rem !important;
+  width: 14.2rem;
+  height: 7.2rem;
+  padding: 0.9rem;
+  border: none !important;
+}
+.recharts-tooltip-label {
+  color: #fff;
+}
+.nftDetailPriceHistory::-webkit-scrollbar {
+  width: 0.1rem;
+  color: #ffcf53;
+  background: #ffcf53;
+  // height: 90%;
+}
+.nftDetailPriceHistory::-webkit-scrollbar-track {
+  background: #272a2e;
+  border-radius: 15px;
+  max-height: 0.5rem;
+}
+.nftDetailPriceHistory::-webkit-scrollbar-thumb {
+  background: #ffcf53;
+  height: 100px;
+  border-radius: 50px;
+  max-height: 0.5rem;
+}
+@media (max-width: 1200px) {
+  .nftDetailPriceHistory {
+    width: 43rem;
+  }
+
+  .nftDetailContent--description--container--owner {
+    align-items: flex-start;
+    grid-row-gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .nftDetailContent--description--container--owner {
+    flex-direction: column;
+  }
+  .nftDetailPriceHistory {
+    width: 30rem;
+  }
+}

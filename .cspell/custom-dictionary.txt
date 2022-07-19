@@ -1,0 +1,11 @@
+# Custom Dictionary Words
+amet
+defi
+dropzone
+hadle
+Initilazed
+Moralis
+Pogination
+Procent
+toastify
+walletconnect

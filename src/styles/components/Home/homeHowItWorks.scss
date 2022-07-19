@@ -1,0 +1,219 @@
+.how_it_works {
+  padding-top: 6.9rem;
+  padding-bottom: 1.077rem;
+  background-color: #16151a;
+
+  &--section-component {
+    width: 80%;
+    background: linear-gradient(
+      84.84deg,
+      rgba(106, 29, 140, 0.05) -4.95%,
+      rgba(97, 246, 255, 0.05) 96.86%
+    );
+    margin-top: 12rem;
+    padding-bottom: 2.8rem;
+    padding-top: 0.5rem;
+    border: 1px solid #60666b;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1rem #b1dff7;
+    border-radius: 6rem;
+
+    &--text {
+      width: 90%;
+      margin: 20px auto;
+      font-style: normal;
+      font-weight: normal;
+      font-family: Roboto;
+      font-size: 20px;
+      line-height: 22px;
+      text-align: center;
+      color: #e5e5e5;
+      opacity: 0.8;
+    }
+
+    &--title {
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 42px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #e5e5e5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &--title {
+    @include center;
+    padding-bottom: 8.9rem;
+    font-family: "Roboto";
+    font-size: 4.2rem;
+    line-height: 4.9rem;
+    color: #e5e5e5;
+  }
+  &--steps {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    &--container {
+      width: 80.704%;
+      display: flex;
+      justify-content: space-evenly;
+      grid-gap: 20px;
+      max-width: 128rem;
+    }
+  }
+  &--explore {
+    height: 20rem;
+    width: 100%;
+    max-width: 32.1rem;
+
+    margin: 0 auto;
+    margin-top: 6.2rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 0.846rem;
+
+      > div {
+        width: 15.5rem;
+        height: 3.523rem;
+        @include center;
+        @include robotoFontBig;
+        border: 1px solid #c2c2c2;
+        box-sizing: border-box;
+        border-radius: 4rem;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      &:first-child {
+        svg {
+          transform: rotate(180deg);
+        }
+        div {
+          color: #ffffff;
+        }
+      }
+      &:last-child {
+        div {
+          background-color: #e3ae23;
+          border-color: #e3ae23;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1285px) {
+  .how_it_works {
+    padding-bottom: 0;
+
+    &--steps {
+      &--container {
+        width: 95%;
+        max-width: unset;
+      }
+    }
+    &--explore {
+      height: unset;
+      padding-bottom: 4rem;
+      margin-top: 4rem;
+    }
+  }
+}
+@media (max-width: 1030px) {
+  .how_it_works {
+    &--steps {
+      &--container {
+        width: 100%;
+        max-width: unset;
+
+        flex-wrap: wrap;
+        max-width: 65.6rem;
+        row-gap: 3rem;
+      }
+    }
+  }
+}
+@media (max-width: 770px) {
+  .how_it_works {
+    &--steps {
+      &--container {
+        .homeHowItWorksStep {
+          margin-left: 3rem;
+          margin-right: 3rem;
+        }
+      }
+    }
+    &--section-component {
+      &--title {
+        font-size: 2rem;
+      }
+      &--text {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+@media (max-width: 508px) {
+  .how_it_works {
+    &--steps {
+      &--container {
+        max-width: 42.8rem;
+        row-gap: 5rem;
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .how_it_works {
+    &--title {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+  }
+}
+// @media (max-width: 320px) {
+//   .how_it_works {
+//     padding-bottom: 5.177rem;
+//     padding-top: 5rem;
+//     &--title {
+//       font-size: 2rem;
+//       line-height: 2.3rem;
+
+//       padding-bottom: 3.6rem;
+//     }
+//     &--steps {
+//       &--container {
+//         flex-direction: column;
+//         align-items: center;
+//         row-gap: 5rem;
+//       }
+//     }
+//     &--explore {
+//       justify-content: center;
+//       grid-gap: 1.3rem;
+//       padding-bottom: unset;
+//       > div {
+//         > div {
+//           width: 13rem;
+//           height: 3.523rem;
+
+//           font-size: 14px;
+//           line-height: 16px;
+//         }
+//       }
+//     }
+//   }
+// }

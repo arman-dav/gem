@@ -36,6 +36,7 @@
     "ethers": "^5.5.3",
     "evm-chains": "^0.2.0",
     "helpers": "^0.0.6",
+    "latest-version": "^7.0.0",
     "moralis": "^0.0.176",
     "node-sass": "4.14.1",
     "react": "^17.0.2",

@@ -22,7 +22,7 @@ const blogSlice = createSlice({
   },
 });
 
-export const getHandleBlog = (): AppThunk => async (dispatch) => {
+export const getHandleBlog = () => async (dispatch:any) => {
   setLoading(true);
   try {
     const { data } = await getBlock();

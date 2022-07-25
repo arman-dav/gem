@@ -17,7 +17,7 @@ import SortedFractionArrComponent from "./SortedFractionArrComponent";
 const NFTDetailFractionalized = () => {
   const { titles } = FractionalizedFakeData;
   const [page, setPage] = useState(0);
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<any>();
 
   const fractionListing = useMemo(() => {
     const strFractionListing: any = localStorage.getItem("fractionListings");

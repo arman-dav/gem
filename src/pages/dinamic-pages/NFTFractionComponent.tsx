@@ -14,7 +14,7 @@ type FractionParams = {
 const NFTFractionComponent = () => {
   let params = useParams<FractionParams>();
   let tokenId = params.tokenId;
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<any>();
 
   useEffect(() => {
     dispatch(fetchFractionDetail(tokenId));

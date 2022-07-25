@@ -13,7 +13,7 @@ export interface IBlogType {
 }
 
 const BlogCollectionsItems = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<any>();
 
   const { blogData }: any = useAppSelector(({ blog }) => ({
     blogData: blog.data,

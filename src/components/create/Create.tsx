@@ -1,9 +1,9 @@
-import { useHistory, useLocation } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 
 import { homeBrowseCategoryFakeData } from "../Home/HomeBrowseCategoryFakeData";
 
 const Create = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const { pathname } = useLocation();
 
   return (
@@ -20,7 +20,7 @@ const Create = () => {
             {homeBrowseCategoryFakeData.map(({ path, img, name }) => (
               <div
                 key={path}
-                onClick={() => history.push(`${pathname + path}`)}
+                onClick={() => navigate(`${pathname + path}`)}
               >
                 <img src={`${img}`} alt={`${path}`} />
                 <p>{name}</p>

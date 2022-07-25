@@ -26,7 +26,7 @@ const CreateImgSection = () => {
         File types supported: JPG, RAW. Max size: 40 Mb
       </p>
       <DropZone
-        accept="image/jpeg, image/png, image/gif, image/bmp image/svg"
+        // accept="image/jpeg, image/png, image/gif, image/bmp image/svg"
         onDrop={handleDrop}
       >
         {({ getRootProps, getInputProps }) => (

@@ -10,7 +10,7 @@ import HomeBrowseCategory from "./HomeBrowseCategory";
 
 const HomeBrowse = () => {
   const qyerryDataGemToken = useMoralisQuery("Collection").data;
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<any>();
   const fractions: any = useSelector((state: any) => state.fractionData.fractionList);
   
   

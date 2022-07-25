@@ -376,7 +376,9 @@ const NFTDetailContent = () => {
                         <span>Freshly Minted</span> <StarsIcon />
                       </>
                     ) : (
-                      { ownerAddress }
+                      <>
+                        { ownerAddress }
+                      </>
                     )}
                   </div>
                 </div>

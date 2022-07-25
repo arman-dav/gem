@@ -13,6 +13,7 @@ export type AboutSellOneStepProps = {
 export type AboutWhoIsItOneInfoProps = {
   name: string;
   info: string;
+  children: React.ReactNode;
 };
 
 export type AboutHowItWorkStepProps = {

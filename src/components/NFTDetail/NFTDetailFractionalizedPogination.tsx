@@ -1,6 +1,10 @@
-import { FC, memo, ReactNode } from "react";
+import { FC, memo } from "react";
 
-const NFTDetailFractionalizedPagination: FC<ReactNode> = ({ children }) => {
+type NFTDetailFractionalizedPaginationProps = {
+  children: React.ReactNode;
+};
+
+const NFTDetailFractionalizedPagination: FC<NFTDetailFractionalizedPaginationProps> = ({ children }) => {
   return <div className="fractionalizedPagination">{children}</div>;
 };
 

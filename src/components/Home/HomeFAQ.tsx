@@ -15,7 +15,7 @@ interface IDataPostType {
 
 const HomeFAQ = () => {
   const faqRef = useRef<any>();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<any>();
   const { data } = useAppSelector(({ faq }) => ({
     data: faq.faqData,
   }));

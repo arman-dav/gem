@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { useMoralis } from "react-moralis";
 import { shallowEqual } from "react-redux";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 
 import { useAppSelector } from "../../redux/hook";
 import { clientConfig } from "../../utils/config";
@@ -22,7 +22,7 @@ const Header = () => {
     false
   );
 
-  const history = useHistory();
+  const navigate = useNavigate();
   const { isAuthenticated, isWeb3Enabled } = useMoralis();
 
   const [headerClass, setHeaderClass] = useState<string>("header__container");
@@ -73,7 +73,7 @@ const Header = () => {
             className="header__logo"
             onClick={() => {
               setCurrentId(null);
-              history.push("/");
+              navigate("/");
               window.location.reload();
             }}
           >

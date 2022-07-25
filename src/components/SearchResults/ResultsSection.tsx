@@ -25,7 +25,7 @@ enum FETCH_STATUS {
 }
 
 const ResultsSection: FC<ResultsSectionProps> = () => {
-  const dispuch = useDispatch();
+  const dispuch = useDispatch<any>();
   const { isAuthenticated, Moralis } = useMoralis();
   const [errMassage, setErrMassage]: any = useState("");
   const { gemName, collectionName, margedItems, price } = useAppSelector(

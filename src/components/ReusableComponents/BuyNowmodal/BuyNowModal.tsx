@@ -21,7 +21,7 @@ export type contentProps = {
 
 const BuyNowModal: FC<contentProps> = (props) => {
     const { pathname } = useLocation();
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<any>();
     const dataLength = props.content?.fractionsSold;
 
     const { USD } = useAppSelector(({ CalculatePrice }) => ({

@@ -20,7 +20,7 @@ const faqSlice = createSlice({
     },
   },
 });
-export const handleFaqData = (): AppThunk => async (dispatch) => {
+export const handleFaqData = () => async (dispatch:any) => {
   dispatch(setLoading(true));
   try {
     const res = await getHerokuApp();

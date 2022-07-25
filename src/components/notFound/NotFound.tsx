@@ -1,4 +1,4 @@
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 
 import { ReactComponent as NotFoundIcon } from "../../assets/notFound/error.svg";
 import { ReactComponent as GoBackIcon } from "../../assets/notFound/goBackIcon.svg";
@@ -9,7 +9,7 @@ const config = process.env.CLIENT
     : clientConfig['NextGem'];
 
 const NotFound = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const randomTitleIdx = Math.floor(Math.random() * config.page404.titles.length) | 0
   const randomDescriptionIdx =
@@ -26,8 +26,8 @@ const NotFound = () => {
                       {description}
                   </span>
                   <div>
-                      <GoBackIcon onClick={() => history.goBack()} />
-                      <span onClick={() => history.push('/')}>Home Page</span>
+                      <GoBackIcon onClick={() => navigate(-1)} />
+                      <span onClick={() => navigate('/')}>Home Page</span>
                   </div>
               </div>
               <div>

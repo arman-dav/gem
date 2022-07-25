@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import { useMoralis } from "react-moralis";
 import { shallowEqual } from "react-redux";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import Layout from "./components/Layout";
 import Routs from "./components/Routs/Routs";
@@ -12,7 +12,7 @@ export type MoralisNFTData = any;
 
 function App() {
   const { pathname } = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const { isAuthenticated } = useMoralis();
   const {
@@ -58,13 +58,13 @@ function App() {
 
   useEffect(() => {
     if (!isAuthenticated && pathname === "/profile") {
-      history.push("/");
+      navigate("/");
     }
   }, [isAuthenticated, pathname]);
 
   return (
     <div className="App">
-      <Layout>
+      <Layout >
         <Routs />
       </Layout>
     </div>

@@ -1,6 +1,7 @@
 export type AboutCategoryProps = {
   aboutCategoryData: AboutCategoryDataType;
   data: AboutCategoryPropsDataType[];
+  children: React.ReactNode;
 };
 
 type AboutCategoryDataType = {

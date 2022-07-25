@@ -26,6 +26,7 @@ export type SelectedFilterProps = {
 export type SelectedPriceFilterProps = {
   from: number | null;
   to: number | null;
+  children: React.ReactNode;
 };
 
 export interface ISearchSectionProps extends IFiltersProps {

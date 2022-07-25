@@ -19,7 +19,7 @@ import history from "../../utils/history";
 import TotalFractionSold from "../ReusableComponents/TotalFractionSold";
 
 const CollectionItems = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<any>();
   const { pathname } = useLocation();
   const collectionAllData = useMoralisQuery("Collection");
   const [name, setName] = useState("Collection");

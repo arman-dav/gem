@@ -38,11 +38,11 @@ import { contentData } from "./model";
 import NFTDetailFractionalized from "./NFTDetailFractionalized";
 
 interface NFTFractionProps {
-  tokenId: string;
+  tokenId?: string;
 }
 
 const NFTFraction = (props:NFTFractionProps) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<any>();
   const { isModal, isOnValidChain } = useAppSelector(
     ({ marketplaceData, walletData }) => ({
       isModal: marketplaceData.isModal,

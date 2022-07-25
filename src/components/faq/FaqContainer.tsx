@@ -9,7 +9,7 @@ import { useAppSelector } from "../../redux/hook";
 import HomeFAQItem from "../Home/HomeFAQItem";
 
 const FaqContainer = () => {
-  const dispuch = useDispatch();
+  const dispuch = useDispatch<any>();
   const { data } = useAppSelector(({ faq }) => ({
     data: faq.faqData,
   }));

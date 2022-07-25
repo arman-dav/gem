@@ -1,9 +1,9 @@
 import { StrictMode } from "react";
 
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { MoralisProvider } from "react-moralis";
 import { Provider } from "react-redux";
-import { Router } from "react-router";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import App from "./App";
 import { store } from "./redux/store";
@@ -19,7 +19,7 @@ if (
 ) {
   app = (
     <StrictMode>
-      <Router history={history}>
+      <Router >
         <Provider store={store}>
           <MoralisProvider
             serverUrl={process.env.REACT_APP_MORALIS_SERVER_URL || ""}
@@ -98,4 +98,4 @@ if (
   );
 }
 
-ReactDOM.render(app, document.getElementById("root"));
+createRoot(document.getElementById("root")  as HTMLElement).render(app)

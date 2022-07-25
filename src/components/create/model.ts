@@ -1,5 +1,6 @@
 export type CreateTitleProps = {
-  text: string;
+  text?: string;
+  children?:  React.ReactNode; 
 };
 
 export type CreateBtnProps = {

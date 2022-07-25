@@ -9,4 +9,5 @@ export interface ITitleRout {
   link?: string;
   pathName: string;
   className?: string;
+  children?: React.ReactNode;
 }

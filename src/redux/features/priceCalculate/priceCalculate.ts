@@ -25,7 +25,7 @@ const CalculatePrice = createSlice({
     },
   },
 });
-export const getPriceData = (): AppThunk => async (dispatch) => {
+export const getPriceData = ()=> async (dispatch:any) => {
   try {
     const res = await getCalculatePrice();
     dispatch(getPrice(res));

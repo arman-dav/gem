@@ -55,10 +55,10 @@ const MenuPopup = () => {
     if (isWeb3Enabled && isAuthenticated) {
       web3?.eth
         .getAccounts()
-        .then((account) => dispatch(setAccount(account[0])));
+        .then((account:any) => dispatch(setAccount(account[0])));
 
       if (account) {
-        web3?.eth.getBalance(account).then((res) => dispatch(setBalance(res)));
+        web3?.eth.getBalance(account).then((res:any) => dispatch(setBalance(res)));
       }
 
       dispatch(setIsOnValidChain(SupportedChains.isSupportedById(chainId)));

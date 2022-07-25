@@ -2,6 +2,7 @@ import { FC } from "react";
 
 import { shallowEqual, useDispatch } from "react-redux";
 import { ToastContainer } from "react-toastify";
+import { Props } from "recharts/types/container/Surface";
 
 import {
   changeMobileMenuState,
@@ -20,8 +21,11 @@ declare global {
     ethereum: any;
   }
 }
+type LayoutProps = {
+  children: React.ReactNode;
+};
 
-const Layout: FC = ({ children }) => {
+const Layout: FC<LayoutProps> = ({ children }:LayoutProps) => {
   const { progress, connectWalletState, createPopupState, menuPopupState } =
     useAppSelector(
       ({ createData, marketplaceData }) => ({

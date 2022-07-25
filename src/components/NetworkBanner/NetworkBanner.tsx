@@ -22,7 +22,7 @@ const NetworkBanner = ({message}: NetworkBannerProps) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const unsubscribe = Moralis.Web3.onChainChanged((chain) => {
+    const unsubscribe = Moralis.Web3.onChainChanged((chain:any) => {
       dispatch(setIsOnValidChain(chain === supportedChainId));
     });
     return unsubscribe;

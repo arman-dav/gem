@@ -7,7 +7,7 @@ import { BlogState } from "../../redux/features/blog/model";
 import { useAppSelector } from "../../redux/hook";
 
 const BlogContainer = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<any>();
   const { blogData }: any = useAppSelector(({ blog }) => ({
     blogData: blog.data,
   }));
